@@ -252,11 +252,19 @@ li.dropdown {
     margin-top: 30px;
     border-radius: 7px;
     margin-left: 10px;
-    height: 250px;
+    height: 300px;
 }
-.img_left{
+.content_right img{
+    border-radius: 3px;
+}
+.content_right .img_left{
     display: flex;
-    padding-top: 20px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+.content_right .img_right{
+    display: flex;
+    padding-top: 5px;
     margin-bottom: 10px;
 }
 
