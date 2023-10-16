@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Ninja H2r</title>
+    
+    <link rel="icon" href="/Icon/kisspng-logo-kawasaki-heavy-industries-kawasaki-motorcycle-kawasaki-logo-4-7e4b7736-seeklogodesktop-ropali-.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+.container_header{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    max-width: 1200px;
+   
+}
+.header{
+    width: auto;
+    padding: 15px 5px 15px 5px;
+    height: 80px;
+    background-color: rgb(19, 19, 19);
+
+}
+.header .header_img img{   
+    float: left;
+    width: 220px;
+    height: 45px;
+    padding-left: 15px;
+
+}
+.header .header_phone{
+    flex-direction: column;  
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    height: 45px  
+}
+.header .header_phone a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #69BD27;  
+}
+.header .header_phone strong{
+    font-size: 20px;
+    color: white;  
+}
+/* menu */
+.menu {
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    display: block;
+    
+}
+.menu_container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+    overflow: hidden; 
+
+}
+.menu_left{
+    float: left;
+    display: flex;
+}
+.menu_container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+  
+}
+.menu_container .menu_left li a,.menu_right li a, li .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 0px;
+    
+}
+
+.menu_container .menu_left li {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.menu_container .menu_right li a{
+    padding-left: 20px;
+    
+    
+    padding-bottom: 16px;
+}
+.menu li a:hover, .dropdown:hover .dropbtn {
+    color: #69BD27;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #161616;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: auto; 
+}
+.dropdown-menu a {
+    color:#69BD27;
+    padding: 12px 16px;
+    text-decoration: none;
+    margin-left: 33px;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.menu_right{
+    float: right;
+    display: flex;
+}
+
+.menu .dropdown .dropdown-menu a img,.menu .dropdown .dropdown-menu a p{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+
+   
+  
+}
+
+#menu {
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    position: fixed;
+    transition: top 0.3s;
+    top: -200px;
+    z-index: 1;
+}
+
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    max-width: 1200px;
+    padding-top: 10px;
+}
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+
+
+.footer {
+    padding: 20px;
+     
+    background: rgb(19, 19, 19);
+    margin-top: 20px;
+    height: 300px;
+}
+.footer .container_footer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    max-width: 1200px;
+}
+.footer .container_footer .contLeft{
+    width: 30%;
+    float: left;
+    
+}
+.footer .container_footer .contCenter{
+    width: 24%;
+    float: left;
+    margin-left: 20px;
+}
+.footer .container_footer .contRight{
+    width: 16%;
+    float: left;
+    margin-left: 20px;
+}
+.footer .container_footer .contRight li{
+    color: white;
+    list-style: none;
+    
+}
+.footer .container_footer .contPhai{
+    width: 24%;
+    float: right;
+    margin-left: 14px;
+}
+.footer .container_footer .contPhai a{
+    color: white;
+}
+.footer .container_footer .contPhai a:hover{
+    color: #69BD27;
+}
+    </style>
+</head>
+<body>
+    <div style="width: 100%; height: auto;">
+        <header class="header">
+            <div class="container_header">
+                <div class="header_img">
+                    <a href="/Home.html">
+                        <img src="/PIC/kawasaki_logo.png" alt="">
+                    </a>
+                </div>
+    
+                <div class="header_phone">
+                    
+                    <strong style="margin-bottom: 2px;">Hotline</strong>
+                    <a href="">0867845804</a>
+                </div>
+            </div>  
+        </header>
+    
+        <nav class="menu" >
+            <nav class="menu_container">
+               <ul class="menu_left">
+                <li><a href="#" >
+                    <i class="fas fa-home"></i>
+                    Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn ">Các Mẫu Xe 
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-menu" style="float: left; padding-left: 100px;" >
+                        <a href="/HOME/Hometest.html" > <img src="/PIC/ninja.png" alt="Ninja" style="margin-left: 50px;" ><p style="margin-left: 50px;">Nija seri</p></a>
+                        <a href="#"><img src="/PIC/z1100.png" alt="Z1000" style="width: 160px;"><p>Z seri</p></a>
+                        <a href="#"><img src="/PIC/cruiser.png" alt="Cruiser"><p>Cruiser</p></a>
+                        <a href="#"><img src="/PIC/touring.png" alt="Touring"><p>Touring</p></a>
+                        <a href="#"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p>
+                </li>
+                <li><a href="#">Phụ Tùng</a> </li>
+                <li><a href="#">Liên Hệ</a></li>
+               </ul>
+    
+               <ul class="menu_right">
+                
+                <li><a href="#">Đăng Ký Chạy Thử</a></li>
+               </ul>
+            </nav>
+    
+        </nav>
+        <!-- menu khi lướt -->
+        <div class="menu" id="menu">
+            <div class="menu_container">
+               <ul class="menu_left">
+                <li><a href="#" >
+                    <i class="fas fa-home"></i>
+                    Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn ">Các Mẫu Xe 
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-menu" style="float: left; padding-left: 100px;" >
+                        <a href="/HOME/Hometest.html"> <img src="/PIC/ninja.png" alt="Ninja" style="margin-left: 50px;" ><p style="margin-left: 50px;">Nija seri</p></a>
+                        <a href="#"><img src="/PIC/z1100.png" alt="Z1000" style="width: 190px;"><p>Z seri</p></a>
+                        <a href="#"><img src="/PIC/cruiser.png" alt="Cruiser"><p>Cruiser</p></a>
+                        <a href="#"><img src="/PIC/touring.png" alt="Touring"><p>Touring</p></a>
+                        <a href="#"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p>
+                </li>
+                <li><a href="#">Phụ Tùng</a> </li>
+                <li><a href="#">Liên Hệ</a></li>
+               </ul>
+    
+               <ul class="menu_right">
+                
+                <li><a href="#">Đăng Ký Chạy Thử</a></li>
+               </ul>
+            </div>
+    
+        </div>
+      <!-- js cho id menu -->
+    
+      <script>
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+            if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+                document.getElementById("menu").style.top = "0";
+            } else {
+                document.getElementById("menu").style.top = "-200px";
+            }
+            }
+      </script>
+    
+      <div class="img">
+            <img src="/PIC/ảnh 2.jpg" alt="" style="width: 100%;">
+      </div>
+    
+      
+      <!-- phần content -->
+     
+            <div class="container">
+                <div class="content">
+                    PHẦN CONTENT CỦA CÁC BẠN Ở ĐÂY
+                </div>
+                
+            </div>
+        <!-- phần footer -->
+       
+        <div class="footer">
+            <div class="container_footer">
+                <div class="contLeft">
+                    <p style="margin-bottom: 28px;"><span style="font-weight: 700; color: #68de0d; font-size: 19px; ">Thông Tin Liên Hệ</span></p>
+                    <p style="margin-bottom: 13px;"><span style="font-weight: 600; color: white; font-size: 17px;">KAWASAKI TỪ LIÊM</span></p>
+                    <p style="margin-bottom: 13px;"><span style="color: white;">Địa Chỉ: Trịnh Văn Bô, Nam Từ Liêm, Hà Nội </span></p>
+                    <p style="margin-bottom: 13px;"><span style="color: white;">Email:Kawasakituliem@gmail.com</span></p>
+                    <p style="margin-bottom: 13px;"><span style="color: white;">HotLine: 0867845804</span></p>
+                    
+                </div>
+                <div class="contCenter">
+                    <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%91%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+%C4%90%C3%B4ng+%C3%81/@21.0400194,105.7389781,15.78z/data=!4m6!3m5!1s0x3135096b31fa7abb:0xff645782804911af!8m2!3d21.0400095!4d105.7419583!16s%2Fg%2F11b6dp60m1?entry=ttu" target="_blank"  style=" bottom: 0; left: 0.5em; width: 400px; font-weight: bold;"><img src="/pic/map.png" alt="" style="width:270px ;"></a>
+                </div>
+                <div class="contRight">
+                    <p style="margin-bottom: 28px;"><span style="font-weight: 700; color: #68de0d; font-size: 19px; ">Giờ Mở Cửa</span></p>
+                    <li>Kinh Doanh: 7h00-21h30</li><br>
+                    <li>Dịch Vụ: 7h30-19h00</li><br>
+                    <li>Mở Tất Cả Các Ngày Trong Tuần</li><br>
+
+                </div>
+                <div class="contPhai">
+                    <p style="margin-bottom: 28px;"><span style="font-weight: 700; color: #68de0d; font-size: 19px; ">Kết Nối Với Chúng Tôi</span></p>
+                    <a href="https://www.facebook.com/tr.thuan.161104" target="_blank" style="text-decoration: none; "><i class="fab fa-facebook" style="color: #68de0d;font-size: 19px; padding-right: 8px; "></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
