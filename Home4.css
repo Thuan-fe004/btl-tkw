@@ -126,10 +126,19 @@ li.dropdown {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-   
 
-   
-  
+
+}
+
+.dropdown-menu a img{
+    transform: scale(1);
+    transition: 0.3s;
+}
+.dropdown-menu a:hover img{
+    transform: scale(1.1);
+}
+.dropdown-menu a:active img{
+    transform: scale(1);
 }
 
 #menu {
@@ -141,6 +150,7 @@ li.dropdown {
     top: -200px;
     z-index: 1;
 }
+
 
 
 .container{
@@ -217,10 +227,10 @@ li.dropdown {
 .article__table-contents .article_conten .article_conten-a a{
     text-decoration: none;
     font-size: 16px;
-    color: #69BD27;
+    color: #69BD27;  
 }
-.article__table-contents .article_conten .article_conten-a a:hover{
-    font-size: 17px;
+.article__table-contents .article_conten .article_conten-a a:hover {
+    font-size: 16.3px;
     text-decoration: underline;
 }
 .content_left .content-2{
@@ -253,7 +263,11 @@ li.dropdown {
     border-radius: 7px;
     margin-left: 10px;
     height: 300px;
+    position: relative;
+   
 }
+
+
 .content_right img{
     border-radius: 3px;
 }
@@ -266,6 +280,61 @@ li.dropdown {
     display: flex;
     padding-top: 5px;
     margin-bottom: 10px;
+}
+.icon_rightt{
+    width: 50px;
+    position: fixed;
+    right: 5px;
+    top: 60%;
+    z-index: 997;
+}
+.icon_rightt a{
+    text-decoration: none;
+    
+    
+}
+.icon_rightt a i{
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    
+    border-radius: 9999px;
+    font-size: 18px;
+    line-height: 40px;
+    
+    
+}
+.icon_rightt a  .fa-map-marker-alt{
+    color: #fff;
+    background-color: #2bc774;
+}
+.icon_rightt a .fa-facebook-f{
+    color: #fff;
+    background-color: #4267b2;
+}
+.icon_rightt a .fa-facebook-messenger{
+    background: linear-gradient(to bottom, #ff1981, #ff00ee, #0084FF);
+    color: #fff;
+    
+
+}
+.icon_rightt a .fa-phone-square-alt{
+    color: #ffffff;
+    background-color: #e32c2c;
+}
+.icon_rightt a i, .content-4 .img_left .img__l a img, .img__ll a img{
+    
+    transform: scale(1);
+	transition: 0.4s;
+
+}
+.icon_rightt a:hover i, .content-4 .img_left .img__l a:hover img, .img__ll a:hover img{
+    transform: scale(1.1);
+}
+.icon_rightt a:active i, .content-4 .img_left .img__l a:active img, .img__ll a:active img{
+    transform: scale(1);
 }
 
 .footer {

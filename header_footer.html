@@ -137,10 +137,19 @@ li.dropdown {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-   
 
-   
-  
+
+}
+
+.dropdown-menu a img{
+    transform: scale(1);
+    transition: 0.3s;
+}
+.dropdown-menu a:hover img{
+    transform: scale(1.1);
+}
+.dropdown-menu a:active img{
+    transform: scale(1);
 }
 
 #menu {
@@ -154,22 +163,62 @@ li.dropdown {
 }
 
 
-.container{
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: auto;
-    max-width: 1200px;
-    padding-top: 10px;
+
+.icon_rightt{
+    width: 50px;
+    position: fixed;
+    right: 5px;
+    top: 60%;
+    z-index: 997;
 }
-.container::after {
-    content: "";
-    display: table;
-    clear: both;
-    }
+.icon_rightt a{
+    text-decoration: none;
+    
+    
+}
+.icon_rightt a i{
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    
+    border-radius: 9999px;
+    font-size: 18px;
+    line-height: 40px;
+    
+    
+}
+.icon_rightt a  .fa-map-marker-alt{
+    color: #fff;
+    background-color: #2bc774;
+}
+.icon_rightt a .fa-facebook-f{
+    color: #fff;
+    background-color: #4267b2;
+}
+.icon_rightt a .fa-facebook-messenger{
+    background: linear-gradient(to bottom, #ff1981, #ff00ee, #0084FF);
+    color: #fff;
+    
 
+}
+.icon_rightt a .fa-phone-square-alt{
+    color: #ffffff;
+    background-color: #e32c2c;
+}
+.icon_rightt a i, .content-4 .img_left .img__l a img, .img__ll a img{
+    
+    transform: scale(1);
+	transition: 0.4s;
 
+}
+.icon_rightt a:hover i, .content-4 .img_left .img__l a:hover img, .img__ll a:hover img{
+    transform: scale(1.1);
+}
+.icon_rightt a:active i, .content-4 .img_left .img__l a:active img, .img__ll a:active img{
+    transform: scale(1);
+}
 
 .footer {
     padding: 20px;
@@ -217,6 +266,7 @@ li.dropdown {
 .footer .container_footer .contPhai a:hover{
     color: #69BD27;
 }
+
     </style>
 </head>
 <body>
@@ -280,12 +330,10 @@ li.dropdown {
                     </a>
                     <div class="dropdown-menu" style="float: left; padding-left: 100px;" >
                         <a href="/HOME/Hometest.html"> <img src="/PIC/ninja.png" alt="Ninja" style="margin-left: 50px;" ><p style="margin-left: 50px;">Nija seri</p></a>
-                        <a href="#"><img src="/PIC/z1100.png" alt="Z1000" style="width: 190px;"><p>Z seri</p></a>
+                        <a href="#"><img src="/PIC/z1100.png" alt="Z1000" style="width: 160px;"><p>Z seri</p></a>
                         <a href="#"><img src="/PIC/cruiser.png" alt="Cruiser"><p>Cruiser</p></a>
                         <a href="#"><img src="/PIC/touring.png" alt="Touring"><p>Touring</p></a>
-                        <a href="#"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p></a>
-                    </div>
-                
+                        <a href="#"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p>
                 </li>
                 <li><a href="#">Phụ Tùng</a> </li>
                 <li><a href="#">Liên Hệ</a></li>
@@ -299,7 +347,7 @@ li.dropdown {
     
         </div>
       <!-- js cho id menu -->
-    
+      
       <script>
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {
@@ -309,7 +357,7 @@ li.dropdown {
                 document.getElementById("menu").style.top = "-200px";
             }
             }
-      </script>
+        </script>
     
       <div class="img">
             <img src="/PIC/ảnh 2.jpg" alt="" style="width: 100%;">
@@ -318,12 +366,18 @@ li.dropdown {
       
       <!-- phần content -->
      
-            <div class="container">
-                <div class="content">
-                    PHẦN CONTENT CỦA CÁC BẠN Ở ĐÂY
-                </div>
-                
-            </div>
+        <div class="container">
+                <H1>Phần content của các bạn</H1>
+            
+        
+        </div>
+    <!-- Phần icon -->
+       <div class="icon_rightt">
+        <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%91%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+%C4%90%C3%B4ng+%C3%81/@21.0400145,105.7393834,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096b31fa7abb:0xff645782804911af!8m2!3d21.0400095!4d105.7419583!16s%2Fg%2F11b6dp60m1?entry=ttu" target="_blank"><i class="fas fa-map-marker-alt" style="color: #fcfcfc;"></i></a>
+        <a href="https://www.facebook.com/tr.thuan.161104" target="_blank"><i class="fab fa-facebook-f"></i></i></a>
+        <a href="https://www.messenger.com/t/100065502450119" target="_blank" ><i class="fab fa-facebook-messenger"></i></a>
+        <a href="tel:0867845804"><i class="fas fa-phone-square-alt"></i></a>
+       </div>
         <!-- phần footer -->
        
         <div class="footer">
