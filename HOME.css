@@ -45,7 +45,7 @@
 }
 /* menu */
 .menu {
-    height: 50px;
+    height: 49px;
     background-color: rgb(29, 29, 29);
     width: 100%;
     display: block;
@@ -142,7 +142,7 @@ li.dropdown {
 }
 
 #menu {
-    height: 50px;
+    height: 49px;
     background-color: rgb(29, 29, 29);
     width: 100%;
     position: fixed;
