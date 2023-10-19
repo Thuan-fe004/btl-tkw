@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Đăng Kí Chạy Thử</title>
+    <style>
+        *{
+            font-family: "Roboto", sans-serif;
+              box-sizing: border-box;
+        }
+      .form {
+        padding: 40px;
+        max-width:350px;
+        margin:40px auto;
+        border: 1px solid #aeaeae;
+        border-radius: 5px;
+        background-color: #e2e2e2;
+      }
+      .form:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .req{
+        margin: 2px;
+        color: red;
+      }
+      .form div input{
+        padding: 10px;
+        border-radius: 2px;
+      }
+      .form div .hovaten{
+        margin: 10px;
+      }
+      .hovaten, .sdt, .email, .date{
+        margin-bottom: 20px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="form">
+        
+        <h2>Form đăng kí chạy thử</h2>
+        <form action="https://www.w3schools.com/action_page.php" method="post" id="registrationForm">
+            <div class="hovaten" style="margin-bottom: 20px;">
+                <label for="hovaten">Họ Và Tên<span class="req">*</span></label><br>
+
+                <input type="text" id="hovaten" placeholder="Họ Và Tên.."  />
+            </div>
+
+            <div class="sdt">
+                <label for="sdt">Số Điện Thoại<span class="req">*</span></label><br>
+
+                <input type="text" id="sdt" placeholder="Sđt.."  />
+            </div>
+
+            <div class="email">
+                <label for="email">Địa Chỉ Email<span class="req">*</span></label><br>
+
+                <input type="email" id="email" placeholder="Email.."  /><br>
+                    
+            </div>
+            <div class="date">
+                <label for="date">Chọn Ngày Lái <span class="req">*</span></label><br>
+
+                <input type="date" id="date" name="date" min="2020-01-01:">
+            </div>
+            <div class="chonxe">
+                <label for="chonxe">Chọn Loại Xe <span class="req">*</span></label><br>
+                <select name="lang" id="chonxe" style="padding: 10px; border-radius: 3px;">
+                    <option value="" ></option>
+                    <option value="h2"><span>Kawasaki Ninja H2</span></option>
+                    <option value="z1000">Kawasaki Z1000</option>
+                    <option value="ZX10R">Kawasaki ZX10R</option>
+                    <option value="ZH2">Kawasaki Z-H2</option>
+                    <option value="Z900">Z900</option>
+                </select><br> <br>
+            </div>
+                <div><input type="submit" value="Gửi" style="padding: 10px;  margin-right: 20px; background-color: rgb(61, 179, 38); border-radius: 5px; border: 1px solid rgb(160, 160, 160);"></div>
+        </form>
+        
+    </div> <!-- /form -->
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        var hoTen = document.getElementById("hovaten").value;
+        var soDienThoai = document.getElementById("sdt").value;
+        var email = document.getElementById("email").value;
+        var chonXe = document.getElementById("chonxe").value;
+        var chonngay = document.getElementById("date").value
+
+            if (hoTen === '') {
+                
+                alert("Vui lòng điền đầy đủ Họ Tên.");
+         
+            } 
+            else if (soDienThoai === '') {
+                alert("Vui lòng điền số đt.")
+                
+              
+            }
+           
+            else if(email === ''){
+                alert("Vui lòng điền email.")
+            }
+            else if(chonXe === ''){
+                alert("Vui lòng chọn loại xe.")
+            }
+
+            else if(chonngay === ''){
+                alert("Vui lòng chọn ngày")
+            }
+            else {
+                
+                alert("Đăng kí thành công!");
+                
+            }
+            console.log("Họ và tên: " + hoTen);
+            console.log("Số điện thoại: " + soDienThoai);
+            console.log("Email: " + email);
+            console.log("Loại xe: " + chonXe);
+            console.log("Ngày Lái Thử: " + chonngay)
+        });
+    </script>
+</body>
