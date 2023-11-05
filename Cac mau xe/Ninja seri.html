@@ -56,36 +56,11 @@
     font-size: 20px;
     color: white;  
 }
-#menu{
-    height: 50px;
-    background-color: rgb(29, 29, 29);
-    width: 100%;
-    
-    position: fixed;
-    transition: top 0.3s;
-    top: -80px;
-    z-index: 1;
-}
-#menu {
-    
-    height: 50px;
-    background-color: rgb(29, 29, 29);
-    width: 100%;
-    display: block;
-    
-    transition: top 0.3s;
-    z-index: 1;
-}
 .menu {
-    
     height: 50px;
     background-color: rgb(29, 29, 29);
     width: 100%;
     display: block;
-    
-    transition: top 0.3s;
-   
-   
     
 }
 .menu_container{
@@ -93,35 +68,47 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1300px;
+    max-width: 1200px;
     overflow: hidden; 
-    
-    
+
 }
 .menu_left{
     float: left;
     display: flex;
 }
-ul {
+.menu_container ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;   
+    overflow: hidden; 
+  
 }
-li a, .dropbtn {
+.menu_container .menu_left li a,.menu_right li a, li .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 16px 16px;
     text-decoration: none;
+    padding: 15px 0px;
+    
 }
-li a:hover, .dropdown:hover .dropbtn {
+
+.menu_container .menu_left li {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.menu_container .menu_right li a{
+    padding-left: 20px;
+    
+    
+    padding-bottom: 16px;
+}
+.menu li a:hover, .dropdown:hover .dropbtn {
     color: #69BD27;
 }
 li.dropdown {
     display: inline-block;
 }
-.dropdown-content {
+.dropdown-menu {
     display: none;
     position: absolute;
     background-color: #161616;
@@ -130,17 +117,50 @@ li.dropdown {
     z-index: 1;
     width: auto; 
 }
-.dropdown-content a {
+.dropdown-menu a {
     color:#69BD27;
     padding: 12px 16px;
     text-decoration: none;
+    margin-left: 33px;
 }
-.dropdown:hover .dropdown-content {
+
+.dropdown:hover .dropdown-menu{
     display: block;
 }
 .menu_right{
     float: right;
     display: flex;
+}
+
+.menu .dropdown .dropdown-menu a img,.menu .dropdown .dropdown-menu a p{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+}
+
+.dropdown-menu a img{
+    transform: scale(1);
+    transition: 0.3s;
+}
+.dropdown-menu a:hover img{
+    transform: scale(1.1);
+}
+.dropdown-menu a:active img{
+    transform: scale(1);
+}
+
+#menu {
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    position: fixed;
+    transition: top 0.3s;
+    top: -200px;
+    z-index: 1;
 }
 
 .content_flex{
@@ -341,76 +361,73 @@ position: relative;
     <nav class="menu" >
         <nav class="menu_container">
            <ul class="menu_left">
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="/HOME.html" >
+                <i class="fas fa-home"></i>
+                Trang Chủ</a>
+            </li>
+            <li><a href="/GioiThieu.html">Giới Thiệu</a></li>
             <li class="dropdown">
                 <a class="dropbtn ">Các Mẫu Xe 
-                    <i class="fas fa-sort-down"  ></i>
+                    <i class="fas fa-sort-down"></i>
                 </a>
-                <div class="dropdown-content   " style="float: left; padding-right: 15px;">
-                    <a href="#"> <img src="/PIC/ninja.png" alt="kawa" style="width: 250px; margin-left: 45px;"><p style="width: 250px; margin-left: 45px;">Nija seri</p></a>
-                    <a href="#"><img src="/PIC/z1100.png" alt="" style="width: 210px;"><p style="width: 250px;">Z seri</p></a>
-                    <a href="#"><img src="/PIC/cruiser.png" alt="" style="width: 250px;"><p style="width: 250px;">Cruiser</p></a>
-                    <a href="#"><img src="/PIC/touring.png" alt="" style="width: 250px;"><p style="width: 250px;">Touring</p></a>
-                    <a href="#"><img src="/PIC/retrosport.png" alt="" style="width: 250px;"><p style="width: 250px;">Retro Sport</p></a>
-                </div>
+                <div class="dropdown-menu" style="float: left; padding-left: 100px;" >
+                    <a href="/Cac mau xe/Ninja seri.html" > <img src="/PIC/ninja.png" alt="Ninja" style="margin-left: 50px;" ><p style="margin-left: 50px;">Nija seri</p></a>
+                    <a href="/Cac mau xe/z seri.html"><img src="/PIC/z1100.png" alt="Z1000" style="width: 160px;"><p>Z seri</p></a>
+                    <a href="/Cac mau xe/cruiser.html"><img src="/PIC/cruiser.png" alt="Cruiser"><p>Cruiser</p></a>
+                    <a href="/Cac mau xe/touring.html"><img src="/PIC/touring.png" alt="Touring"><p>Touring</p></a>
+                    <a href="/Cac mau xe/retro sport.html"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p>
             </li>
-            <li><a href="#">Phụ Tùng</a> </li>
-            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="/PhuTung.html">Phụ Tùng</a> </li>
+            <li><a href="/LienHe.html"><span style="padding-left: 3px; padding-right: 3px;">Liên Hệ</span></a></li>
            </ul>
 
            <ul class="menu_right">
             
-            <li><a href="#">Đăng Ký Chạy Thử</a></li>
+            <li><a href="/FormDangKi.html">Đăng Ký Chạy Thử</a></li>
            </ul>
-
-           
         </nav>
 
-        
     </nav>
-    <nav class="menu" id="menu">
-        <nav class="menu_container">
+    <!-- menu khi lướt -->
+    <div class="menu" id="menu">
+        <div class="menu_container">
            <ul class="menu_left">
-            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="/HOME.html" >
+                <i class="fas fa-home"></i>
+                Trang Chủ</a></li>
             <li><a href="#">Giới Thiệu</a></li>
             <li class="dropdown">
-                <a class="dropbtn " >Các Mẫu Xe 
-                    
+                <a class="dropbtn ">Các Mẫu Xe 
+                    <i class="fas fa-sort-down"></i>
                 </a>
-                <div class="dropdown-content   " style="float: left; padding-right: 15px;">
-                    <a href="#"> <img src="/PIC/ninja.png" alt="kawa" style="width: 240px; margin-left: 40px;"><p style="width: 240px; margin-left: 40px;">Nija seri</p></a>
-                    <a href="#"><img src="/PIC/z1100.png" alt="" style="width: 200px;"><p style="width: 230px;">Z seri</p></a>
-                    <a href="#"><img src="/PIC/cruiser.png" alt="" style="width: 240px;"><p style="width: 240px;">Cruiser</p></a>
-                    <a href="#"><img src="/PIC/touring.png" alt="" style="width: 240px;"><p style="width: 240px;">Touring</p></a>
-                    <a href="#"><img src="/PIC/retrosport.png" alt="" style="width: 240px;"><p style="width: 240px;">Retro Sport</p></a>
-                </div>
+                <div class="dropdown-menu" style="float: left; padding-left: 100px;" >
+                    <a href="/Cac mau xe/Ninja seri.html"> <img src="/PIC/ninja.png" alt="Ninja" style="margin-left: 50px;" ><p style="margin-left: 50px;">Nija seri</p></a>
+                    <a href="/Cac mau xe/z seri.html"><img src="/PIC/z1100.png" alt="Z1000" style="width: 160px;"><p>Z seri</p></a>
+                    <a href="/Cac mau xe/cruiser.html"><img src="/PIC/cruiser.png" alt="Cruiser"><p>Cruiser</p></a>
+                    <a href="/Cac mau xe/touring.html"><img src="/PIC/touring.png" alt="Touring"><p>Touring</p></a>
+                    <a href="/Cac mau xe/retro sport.html"><img src="/PIC/retrosport.png" alt="Retrosport" ><p>Retro Sport</p>
             </li>
-            <li><a href="#">Phụ Tùng</a> </li>
-            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="/PhuTung.html">Phụ Tùng</a> </li>
+            <li><a href="/LienHe.html" ><span style="padding-left: 3px; padding-right: 3px;">Liên Hệ</span></a></li>
            </ul>
 
            <ul class="menu_right">
-            <li><a href="#">Đăng Nhập</a></li>
-            <li><a href="#">Đăng Kí</a></li>
+            
+            <li><a href="/FormDangKi.html">Đăng Ký Chạy Thử</a></li>
            </ul>
+        </div>
 
-           
-        </nav>
-
-        
-    </nav>
-    
-
-    <script>
+    </div>
+  <!-- js cho id menu -->
+  
+  <script>
         window.onscroll = function() {scrollFunction()};
-        
         function scrollFunction() {
-          if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+        if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
             document.getElementById("menu").style.top = "0";
-          } else {
-            document.getElementById("menu").style.top = "-80px";
-          }
+        } else {
+            document.getElementById("menu").style.top = "-200px";
+        }
         }
     </script>
 <br>
@@ -433,7 +450,7 @@ position: relative;
                         <script>
                             const image = document.querySelector('.zoomable-image');
                             image.addEventListener('mouseenter', function() {
-                                image.style.transform = 'scale(1.2)';
+                                image.style.transform = 'scale(1.02)';
                             });
                             
                             image.addEventListener('mouseleave', function() {
@@ -497,7 +514,7 @@ position: relative;
                 trên tiêu chí giá bán rẻ và có hiệu quả sử dụng cao.</p>
 
         <div style="text-align: center;">
-            <img src = "../img//vulcan danhgia 1.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="800px" height = "auto">
+            <img src = "/pic//vulcan_danhgia_1.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="800px" height = "auto">
             <p class = "name_img" ><em>Kawasaki Vulcan S 2020 được bình chọn là mẫu xe giá trị nhất phân khúc.</em></p>
         </div>
 
@@ -515,7 +532,7 @@ position: relative;
         </div> 
 
         <div style="text-align: center;">
-            <img src = "../img/vulcan danhgia 2.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="800px" height = "auto">
+            <img src = "/pic/gioithieu/vulcan_danhgia_2.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="800px" height = "auto">
             <p class = "name_img" ><em>Kawasaki Z1000 ABS phiên bản Tiêu chuẩn với màu tem Đen Đỏ cá tính</em></p>
         </div> 
 
@@ -531,7 +548,7 @@ position: relative;
         </div>
 
         <div style="text-align: center;">
-            <img src = "../img//vulcan danhgia 3.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="600px" height = "auto">
+            <img src = "/pic/gioithieu/kawasaki-z1000-danhgia.jpg"  class = "content_evaluate_img" alt="z100-danhgia" width="600px" height = "auto">
             <p class = "name_img" ><em>Kawasaki Z1000 R ABS 2020 - Phiên bản R thể thao hơn, mạnh mẽ hơn</em></p>
         </div>
 
@@ -545,7 +562,7 @@ position: relative;
             <p><strong>Kawasaki Z1000 ABS và Z1000 R ABS 2020</strong> vẫn sử dụng động cơ DOHC, 4 xy-lanh, dung tích 1.043 cc. Sản sinh công suất tối đa 142 mã lực tại 10.000 vòng/phút và mô-men xoắn 111 Nm tại 7.300 vòng/phút. Xe được trang bị hộp số côn tay 6 cấp.</p>
         </div>  
 
-        <!-- <div style="text-align: center;">
+         <div style="text-align: center;">
             <img src = "../img/"  class = "content_evaluate_img" alt="z100-danhgia" width="600px" height = "auto">
             <p class = "name_img" ><em>Kawasaki Z1000 ABS 2020 sở hữu nhiều trang bị hàng hiệu, động cơ có sức kéo mạnh mẽ</em></p>
         </div>
@@ -560,16 +577,16 @@ position: relative;
             <p>Với tiêu chí dich vụ đạt <strong>chuẩn 5 S </strong>: Kinh doanh có chọn lọc, mang đến những sản phẩm Tốt Nhất, Sàng lọc, Quản lý chặt chẽ - Sắp xếp công việc có khoa học, hiệu suất công việc cao  - Dịch vụ đạt Tiêu chuẩn hàng đầu, Môi trường làm việc Chuyên nghiệp, Gọn gàng, Sạch sẽ - Chăm sóc khách hàng chu đáo, nhiệt tình - Luôn luôn sẵn sàng phục vụ, mọi lúc mọi nơi.</p>
                 <br>
             <p><strong>Liên hệ số Hotline : ( 0962618829 ) để biết thêm chi tiết và được tư vấn miễn phí!</strong></p>
-        </div> -->
+        </div> 
     <br>
 
     <h3>Thư viện ảnh</h3>
-        <!-- <div class="content_img">
-            <img class = "zoomable-image-bottom" src="../img/z1000 thư viện 1.jpg" alt="H2R Image" width="387px" height = "300px" >
-            <img class = "zoomable-image-bottom" src="../img/z1000-thư viện 2.jpg" alt="H2R Image" width="387px" height = "300px" >
-            <img class = "zoomable-image-bottom" src="../img/z1000-thư viện 3.jpg" alt="H2R Image" width="387px" height = "300px" >
+         <div class="content_img">
+            <img class = "zoomable-image-bottom" src="/pic/gioithieu/1.jpg" alt="H2R Image" width="387px" height = "300px" >
+            <img class = "zoomable-image-bottom" src="/pic/gioithieu/vulcan_top_5.jpg" alt="H2R Image" width="387px" height = "300px" >
+            <img class = "zoomable-image-bottom" src="/pic/gioithieu/vulcan_bottom_1.jpg" alt="H2R Image" width="387px" height = "300px" >
                 <div class="fullscreen-image">
-                    <img src="../img/z1000-thư viện 6.jpg" alt="H2R Image" width="1000px" height = "auto">
+                    <img src="/pic/gioithieu/kawasaki-z1000-danhgia.jpg" alt="H2R Image" width="1000px" height = "auto">
                 </div>
             <img class = "zoomable-image-bottom" src="../img/z1000-thư viện 4.jpg" alt="H2R Image" width="387px" height = "300px" >
                 <div class="fullscreen-image">
@@ -587,7 +604,7 @@ position: relative;
         <img src="../img/2020-kawasaki-z1000 -1.jpg" alt="Ảnh">
       </div>
                 
-        </div> -->
+        </div> 
 
 
 
@@ -597,15 +614,18 @@ position: relative;
         <img src="../img/2020-kawasaki-z1000 -1.jpg" alt="Ảnh">
     </div>
     
-        <script>
+    <script>
+        const zoomableImages = document.querySelectorAll('.zoomable-image-bottom');
         const fullscreenImage = document.querySelector('.fullscreen-image');
-      
-        document.querySelector('img').addEventListener('click', function() {
-          const imageSrc = this.getAttribute('src');
-          fullscreenImage.querySelector('img').setAttribute('src', imageSrc);
-          fullscreenImage.style.display = 'flex';
+
+        zoomableImages.forEach(function(image) {
+          image.addEventListener('click', function() {
+            const imageSrc = this.getAttribute('src');
+            fullscreenImage.querySelector('img').setAttribute('src', imageSrc);
+            fullscreenImage.style.display = 'flex';
+          });
         });
-      
+
         fullscreenImage.addEventListener('click', function() {
           fullscreenImage.style.display = 'none';
         });
